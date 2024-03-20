@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rewarded Ad Example</title>
+    <!-- Include the AdMob JavaScript SDK -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        // Initialize the AdMob ad unit ID
+        var adUnitId = "ca-app-pub-3940256099942544/5224354917"; // Replace with your rewarded ad unit ID
+
+        // Function to load the rewarded ad
+        function loadRewardedAd() {
+            // Load the rewarded ad
+            var ad = new google.adsbygoogle.AdUnit(document.getElementById('ad-container'));
+            ad.setAdUnitId(adUnitId);
+            ad.load();
+        }
+    </script>
+</head>
+<body>
+    <!-- Container for the rewarded ad -->
+    <div id="ad-container">
+        <!-- Rewarded ad will be loaded here -->
+    </div>
+
+    <!-- Load the rewarded ad when the page loads -->
+    <script>
+        window.onload = function() {
+            loadRewardedAd();
+        };
+    </script>
+</body>
+</html>
